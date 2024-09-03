@@ -51,6 +51,35 @@ nav ul li a {
     font-size: 25px;
 }
 
+@media (max-width: 600px) {
+    nav ul {
+        text-align: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .container {
+        width: 95%;
+    }
+}
+
+/* Estilo para tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+    nav ul li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+    
+    .container {
+        width: 90%;
+    }
+}
+
+
 main {
     padding: 0; /* Remove o padding do main para eliminar espaços extras */
     text-align: center;
@@ -163,7 +192,7 @@ main {
 
 .retangulo {
     background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
-     border: 1px solid rgba(221, 221, 221, 0.5); /* Borda translúcida */
+    border: 1px solid rgba(221, 221, 221, 0.5); /* Borda translúcida */
     background-image: url('Fondo\ degradado\ en\ tonos\ verdes\ _\ Vector\ Gratis.jpeg');
     background-size: cover;
     background-position: center;
@@ -172,7 +201,69 @@ main {
     height: 500px;
     width: 35%; /* Largura dos retângulos */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para um efeito de profundidade */
-    transition: transform 0.3s; /* Animação de transformação */
+    animation: moveIn 1s ease-out forwards; /* Animação de entrada com 'forwards' para manter o estado final */
+    opacity: 1; /* Garante que eles permaneçam visíveis */
+    position: relative; /* Necessário para usar transformações de posição */
+}
+
+.retangulo:nth-child(1) {
+    animation: moveInFromLeft 1s ease-out forwards;
+}
+
+.retangulo:nth-child(2) {
+    animation: moveInFromRight 1s ease-out forwards;
+}
+
+.retangulo:nth-child(3) {
+    animation: moveInFromTop 1s ease-out forwards;
+}
+
+.retangulo:nth-child(4) {
+    animation: moveInFromBottom 1s ease-out forwards;
+}
+
+@keyframes moveInFromLeft {
+    from {
+        transform: translateX(-100%) scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes moveInFromRight {
+    from {
+        transform: translateX(100%) scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes moveInFromTop {
+    from {
+        transform: translateY(-100%) scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes moveInFromBottom {
+    from {
+        transform: translateY(100%) scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
 }
 
 .retangulo:hover {
@@ -198,20 +289,7 @@ main {
     font-family: 'Georgia', serif; /* Fonte serifada para o parágrafo */
     text-align: justify; /* Justificar o texto */
     padding: 10px; /* Adiciona espaçamento interno */
-    
     border-radius: 5px; /* Bordas arredondadas para o texto */
-}
-
-
-#three-images-section {
-    position: relative; /* Para que o pseudo-elemento seja posicionado em relação ao elemento pai */
-    background-color: #ffffff; /* Cor de fundo para a seção de imagens */
-    /*background-image: url('Fondo\ degradado\ en\ tonos\ verdes\ _\ Vector\ Gratis.jpeg'); /* Imagem de fundo específica para a seção */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 100px 0; /* Espaçamento interno da seção */
-    z-index: 1; /* Garante que o conteúdo da seção fique acima do overlay */
 }
 
 #three-images-section::before {
