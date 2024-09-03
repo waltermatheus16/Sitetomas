@@ -258,7 +258,7 @@ main {
 .retangulo h3 {
     font-size: 1.8em;
     margin-bottom: 15px;
-    color: #000000; /* Cor do título */
+    color: #333; /* Cor do título */
     font-family: 'Arial', sans-serif; /* Fonte personalizada */
     text-transform: uppercase; /* Letras maiúsculas */
     letter-spacing: 1px; /* Espaçamento entre letras */
@@ -269,7 +269,7 @@ main {
 
 .retangulo p {
     font-size: 1.2em;
-    color: #000000; /* Cor do texto */
+    color: #666; /* Cor do texto */
     line-height: 1.5; /* Espaçamento entre linhas */
     text-align: justify; /* Justificar texto */
     margin-bottom: 20px; /* Espaçamento inferior */
@@ -318,7 +318,7 @@ main {
 
 .retangulo p {
     font-size: 1.2em;
-    color: #000000; /* Cor do texto */
+    color: #666; /* Cor do texto */
     line-height: 1.5; /* Espaçamento entre linhas */
     text-align: justify; /* Justificar texto */
     margin-bottom: 20px; /* Espaçamento inferior */
@@ -631,20 +631,20 @@ main {
 
 
 #historia-visao {
-    display: flex;
-    background-color: #000000;
-    justify-content: space-around;
-    background-image: url('Fondo negro y gris con superposición de cuadrados geométricos y estilo de papel de sombra _ Vector Premium.jpeg');
-    margin: 0;
-    height: 1100px !important; /* Força a altura desejada da seção */
-    align-items: center;
+display: flex;
+background-color: #000000;
+justify-content: space-around;
+background-image: url('Fondo negro y gris con superposición de cuadrados geométricos y estilo de papel de sombra _ Vector Premium.jpeg');
+margin: 0px 0;
+ height:570px; /* Altura do section */
+align-items: center; /* Alinha os itens verticalmente ao centro */
 }
 
 .retangulo {
     position: relative;
     top: 0x; 
-    height: 70%; /* Aumenta a altura para dispositivos móveis */
-    width: 40%; /* Ajusta a largura para dispositivos móveis */
+    height: 35%; /* Aumenta a altura para dispositivos móveis */
+    width: 80%; /* Ajusta a largura para dispositivos móveis */
 }
 
 }
@@ -667,7 +667,6 @@ main {
         display: flex;
         flex-direction: column;
         cursor: pointer;
-
     }
 
     .menu-toggle .bar {
@@ -682,9 +681,9 @@ main {
 
     .nav-menu {
         display: none;
-        flex-direction: column;
-        width: 440px; /* Ajuste conforme necessário */
-        position: absolute; /* Corrigido para 'absolute' */
+        flex-direction: column; /* Garante que os itens sejam empilhados verticalmente */
+        width: 100%; /* Ajuste conforme necessário para ocupar a largura total do dispositivo */
+        position: absolute;
         top: 162px; /* Ajuste conforme a altura do cabeçalho e do hambúrguer */
         right: 0; /* Alinha o menu com o botão hambúrguer */
         background-color: #000000; /* Fundo escuro para o menu */
@@ -697,24 +696,32 @@ main {
     }
 
     .nav-menu ul {
-        flex-direction: column;
+        display: flex;
+        flex-direction: column; /* Garante que os itens da lista sejam exibidos em coluna */
         width: 100%;
         padding: 0; /* Remove o padding se houver */
         margin: 0; /* Remove a margem se houver */
     }
 
     .nav-menu ul li {
-        margin: 10px 0;
+        margin: 10px 0; /* Espaçamento vertical entre os itens */
     }
 
     .nav-menu ul li a {
+        display: block;
         font-size: 20px;
         padding: 10px 20px;
         color: white; /* Garante que o texto seja visível em fundo escuro */
         text-decoration: none; /* Remove sublinhado dos links */
     }
 
-
+    .retangulo {
+        position: relative;
+        top: -50x; 
+        height: 95%; /* Aumenta a altura para dispositivos móveis */
+        width: 37%; /* Ajusta a largura para dispositivos móveis */
+    }
+}
 
 
 #historia-visao {
@@ -723,17 +730,9 @@ main {
     justify-content: space-around;
     background-image: url('Fondo negro y gris con superposición de cuadrados geométricos y estilo de papel de sombra _ Vector Premium.jpeg');
     margin: 0px 0;
-     height: 1550px; /* Altura do section */
+     height: 1500px; /* Altura do section */
     align-items: center; /* Alinha os itens verticalmente ao centro */
 }
-.retangulo {
-    position: relative;
-    top: -50x; 
-    height: 95%; /* Aumenta a altura para dispositivos móveis */
-    width: 36%; /* Ajusta a largura para dispositivos móveis */
-}
-
-
 
 
 
@@ -749,5 +748,3 @@ main {
     .menu-toggle.active .bar:nth-child(3) {
         transform: rotate(45deg) translate(-5px, -6px);
     }
-
-}
