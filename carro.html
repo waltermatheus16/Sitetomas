@@ -34,7 +34,8 @@
     <main>
         <section id="formulario-seguro">
             <h2>Formulário de Seguro de tu automóvil</h2>
-            <form action="https://formsubmit.co/walter2010mateus@gmail.com" method="post" id="insurance-form" onsubmit="return redirectToThankYouPage()">
+            <form action="https://api.staticforms.xyz/submit" method="post" id="insurance-form" onsubmit="return redirectToThankYouPage()">
+                <input type="hidden" name="accessKey" value="8412bdfd-3c48-46bb-84eb-bc57b838186c">
                 <div class="form-group">
                     <label for="nome">Nombre Completo:</label>
                     <input type="text" id="nome" name="nome" placeholder="Escribe tu nombre completo" required>
