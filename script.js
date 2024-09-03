@@ -22,6 +22,33 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function redirectToThankYouPage() {
-    window.location.href = 'agradecimento.html';
-    return false; // Previne o envio real do formulário
+    // Previne o comportamento padrão de envio do formulário
+    event.preventDefault();
+
+    // Cria um objeto FormData a partir do formulário
+    var formData = new FormData(document.getElementById('insurance-form'));
+
+    // Envia os dados do formulário usando fetch para o Formspree
+    fetch('https://formspree.io/f/xwpezljr', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Se a resposta for OK, redireciona para a página de agradecimento
+            window.location.href = 'agradecimento.html';
+        } else {
+            // Se houver um problema, mostra uma mensagem de erro
+            alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
+        }
+    })
+    .catch(error => {
+        console.error('Erro ao enviar o formulário:', error);
+        alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
+    });
+
+    return false; // Impede o envio padrão do formulário
 }
