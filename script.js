@@ -20,3 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
         navMenu.classList.toggle('active');
     });
 });
+
+function redirectToThankYouPage() {
+    window.location.href = 'agradecimento.html';
+    return false; // Previne o envio real do formulário
+}
