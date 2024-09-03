@@ -1,10 +1,7 @@
-
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url(''); /* Fundo geral */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,9 +20,9 @@ body {
 }
 
 /* Estilos específicos para dispositivos menores (tablet e celular) */
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
     .container {
-        width: 90%;
+        width: 20%;
     }
 
     .header {
@@ -66,26 +63,26 @@ header {
     margin: 0; /* Remove a margem do cabeçalho */
 }
 
-.logo img {
-    height: 130px;
-    margin-left: 40px;
+
+.logo {
+    margin-right: 150px; /* Margem à direita para manter o logo afastado da borda */
 }
 
+.logo img {
+    height: 130px;
+}
+
+nav {
+    display: flex;
+    flex-grow: 1; /* Permite que o nav ocupe o espaço disponível */
+    margin-left: 700px; /* Ajusta a posição do nav para a direita */
+}
 
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin-right: 0px;
-}
-
-nav {
-    padding-left: 800px; /* Adiciona padding à esquerda do menu */
-}
-
-nav ul {
     margin: 0; /* Remove margem */
-    padding-left: 20px; /* Ajusta o padding para mover o menu */
 }
 
 nav ul li {
@@ -116,7 +113,7 @@ main {
 /* Fundo específico para a seção dos botões */
 #formulario {
     background-color: #ffffff; /* Cor de fundo para a seção de botões */
-    background-image: url('Fondo\ degradado\ en\ tonos\ verdes\ _\ Vector\ Gratis.jpeg'); /* Imagem de fundo específica para a seção */
+    background-image: url('Fondo degradado en tonos verdes _ Vector Gratis.jpeg'); /* Imagem de fundo específica para a seção */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -196,15 +193,11 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-
 #historia-visao {
     display: flex;
     background-color: #000000;
     justify-content: space-around;
-    background-image: url('Fondo\ negro\ y\ gris\ con\ superposición\ de\ cuadrados\ geométricos\ y\ estilo\ de\ papel\ de\ sombra\ _\ Vector\ Premium.jpeg');
+    background-image: url('Fondo negro y gris con superposición de cuadrados geométricos y estilo de papel de sombra _ Vector Premium.jpeg');
     margin: 0px 0;
     height: 800px; /* Altura do section */
     align-items: center; /* Alinha os itens verticalmente ao centro */
@@ -213,7 +206,7 @@ main {
 .retangulo {
     background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
     border: 1px solid rgba(221, 221, 221, 0.5); /* Borda translúcida */
-    background-image: url('Fondo\ degradado\ en\ tonos\ verdes\ _\ Vector\ Gratis.jpeg');
+    background-image: url('Fondo degradado en tonos verdes _ Vector Gratis.jpeg');
     background-size: cover;
     background-position: center;
     border-radius: 90px; /* Bordas arredondadas */
@@ -269,14 +262,82 @@ main {
 }
 
 .retangulo p {
-    font-size: 1.1em;
-    line-height: 1.8;
-    color: #000000; /* Cor do texto */
-    font-family: 'Georgia', serif; /* Fonte serifada para o parágrafo */
-    text-align: justify; /* Justificar o texto */
-    padding: 10px; /* Adiciona espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas para o texto */
+    font-size: 1.2em;
+    color: #666; /* Cor do texto */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    text-align: justify; /* Justificar texto */
+    margin-bottom: 20px; /* Espaçamento inferior */
 }
+
+.retangulo button {
+    background-color: #000000; /* Cor do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.retangulo button:hover {
+    background-color: #ff0000; /* Cor do botão ao passar o mouse */
+}
+
+@keyframes moveIn {
+    from {
+        transform: translateX(-100%) scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.retangulo:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.retangulo h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333; /* Cor do título */
+    font-family: 'Arial', sans-serif; /* Fonte personalizada */
+    text-transform: uppercase; /* Letras maiúsculas */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    text-align: center; /* Centralizar o título */
+    border-bottom: 2px solid #000000; /* Linha inferior */
+    padding-bottom: 10px; /* Espaçamento inferior */
+}
+
+.retangulo p {
+    font-size: 1.2em;
+    color: #666; /* Cor do texto */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    text-align: justify; /* Justificar texto */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.retangulo button {
+    background-color: #000000; /* Cor do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.retangulo button:hover {
+    background-color: #333333; /* Cor do botão ao passar o mouse */
+}
+
+
+
+/* Parte Seguros y paginas */
+
+
+
 
 #three-images-section {
     position: relative; /* Para que o pseudo-elemento seja posicionado em relação ao elemento pai */
@@ -469,6 +530,9 @@ main {
     line-height: 1.3; /* Espaçamento entre linhas */
 }
 
+
+
+
 .footer {
     background-color: #282828; /* Cor de fundo do footer */
     color: #ffffff; /* Cor do texto */
@@ -510,34 +574,40 @@ main {
 }
 
 
-/* Estilo do menu hambúrguer */
+
+
+
+
+
+/* Estilo para o menu Tablet */
+
+@media (max-width: 1280px) {
 .menu-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
     align-items: center;
+    position: relative; /* Permite posicionamento absoluto do menu */
 }
 
+/* Mantenha o estilo existente para o toggle do menu */
 .menu-toggle {
-    display: none;
+    display: flex;
     flex-direction: column;
     cursor: pointer;
 }
-
-.menu-toggle .bar {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
-    transition: 0.3s;
-}
-
 .nav-menu {
     display: flex;
-}
+    flex-direction: column;
+    width: 550px; /* Ajuste conforme necessário */
+    position: absolute; /* Corrigido de 'absolut' para 'absolute' */
+    top: 80px; /* Ajuste conforme a altura do cabeçalho */
+    right: 40px; /* Define um valor absoluto para o alinhamento */
 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para maior destaque */
+}
 .nav-menu ul {
     display: flex;
-    list-style: none;
+    list-style: flex;
     margin: 0;
     padding: 0;
 }
@@ -552,26 +622,53 @@ main {
     font-size: 18px;
 }
 
-/* Estilos para o menu hambúrguer em dispositivos menores */
+}
+
+
+
+
+
+
+/* Estilos para o menu hambúrguer em dispositivos Celular */
 /* Responsividade */
 @media (max-width: 768px) {
     .menu-container {
-        flex-direction: column;
-        align-items: flex-start;
+        display: flex;
+        margin-right: 20px;
+        align-items: center;
+        position: relative; /* Permite posicionamento absoluto do menu */
     }
 
     .menu-toggle {
         display: flex;
+        flex-direction: column;
+        cursor: pointer;
+          padding: 0; /* Remove qualquer padding do contêiner */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura/altura */
+}
     }
+
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    right: auto; /* Ajuste conforme necessário */
+    left: auto; /* Remove o valor de left, se não for necessário */
+    background-color: white;
+    margin: 5px 20px 5px 0; /* Margem superior, direita, inferior e esquerda */
+    transition: 0.3s;
+}
 
     .nav-menu {
         display: none;
         flex-direction: column;
-        width: 100%;
-        position: absolute; /* Fica sobre o conteúdo */
-        top: 60px; /* Ajuste conforme a altura do cabeçalho */
-        left: 0;
+        width: 450px; /* Ajuste conforme necessário */
+        position: absolute; /* Corrigido para 'absolute' */
+        top: 162px; /* Ajuste conforme a altura do cabeçalho e do hambúrguer */
+        right: 0; /* Alinha o menu com o botão hambúrguer */
         background-color: #000000; /* Fundo escuro para o menu */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para maior destaque */
+        z-index: 1000; /* Garante que o menu apareça sobre outros elementos */
     }
 
     .nav-menu.active {
@@ -581,6 +678,8 @@ main {
     .nav-menu ul {
         flex-direction: column;
         width: 100%;
+        padding: 0; /* Remove o padding se houver */
+        margin: 0; /* Remove a margem se houver */
     }
 
     .nav-menu ul li {
@@ -590,18 +689,19 @@ main {
     .nav-menu ul li a {
         font-size: 20px;
         padding: 10px 20px;
+        color: white; /* Garante que o texto seja visível em fundo escuro */
+        text-decoration: none; /* Remove sublinhado dos links */
     }
-}
 
-/* Efeito ao clicar no botão de menu hambúrguer */
-.menu-toggle.active .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
+    /* Efeito ao clicar no botão de menu hambúrguer */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
 
-.menu-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-}
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
 
-.menu-toggle.active .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
