@@ -643,26 +643,23 @@ main {
         display: flex;
         flex-direction: column;
         cursor: pointer;
-          padding: 0; /* Remove qualquer padding do contêiner */
-    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura/altura */
-}
+       
     }
 
-
-.menu-toggle .bar {
-    width: 30px;
-    height: 3px;
-    right: auto; /* Ajuste conforme necessário */
-    left: auto; /* Remove o valor de left, se não for necessário */
-    background-color: white;
-    margin: 5px 20px 5px 0; /* Margem superior, direita, inferior e esquerda */
-    transition: 0.3s;
-}
+    .menu-toggle .bar {
+        width: 30px;
+        height: 3px;
+        right: 80px; /* Ajuste o valor conforme necessário */
+        left: 200px; /* Ajuste este valor conforme necessário */
+        background-color: white;
+        margin: 5px 20px 5px 0px; /* Margem superior, direita, inferior e esquerda, respectivamente */
+        transition: 0.3s;
+    }
 
     .nav-menu {
         display: none;
         flex-direction: column;
-        width: 450px; /* Ajuste conforme necessário */
+        width: 440px; /* Ajuste conforme necessário */
         position: absolute; /* Corrigido para 'absolute' */
         top: 162px; /* Ajuste conforme a altura do cabeçalho e do hambúrguer */
         right: 0; /* Alinha o menu com o botão hambúrguer */
@@ -705,3 +702,4 @@ main {
     .menu-toggle.active .bar:nth-child(3) {
         transform: rotate(45deg) translate(-5px, -6px);
     }
+}
