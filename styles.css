@@ -725,15 +725,15 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
     justify-content: space-between; /* ou space-evenly */
     background-image: url('Fondo negro y gris con superposición de cuadrados geométricos y estilo de papel de sombra _ Vector Premium.jpeg');
     margin: 0px 0;
-    height: 1500px;
+    height: 1600px;
     align-items: center;
 }
 
 .retangulo {
     position: relative;
     top: -50x;
-    height: 97%; /* Aumenta a altura para dispositivos móveis */
-    width: 40%; /* Ajusta a largura para dispositivos móveis */
+    height: 1450px; /* Aumenta a altura para dispositivos móveis */
+    width: 37%; /* Ajusta a largura para dispositivos móveis */
 }
 
 
