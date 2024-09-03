@@ -258,7 +258,7 @@ main {
 .retangulo h3 {
     font-size: 1.8em;
     margin-bottom: 15px;
-    color: #333; /* Cor do título */
+    color: #000000; /* Cor do título */
     font-family: 'Arial', sans-serif; /* Fonte personalizada */
     text-transform: uppercase; /* Letras maiúsculas */
     letter-spacing: 1px; /* Espaçamento entre letras */
@@ -269,7 +269,7 @@ main {
 
 .retangulo p {
     font-size: 1.2em;
-    color: #666; /* Cor do texto */
+    color: #000000; /* Cor do texto */
     line-height: 1.5; /* Espaçamento entre linhas */
     text-align: justify; /* Justificar texto */
     margin-bottom: 20px; /* Espaçamento inferior */
@@ -316,9 +316,10 @@ main {
     padding-bottom: 10px; /* Espaçamento inferior */
 }
 
+
 .retangulo p {
     font-size: 1.2em;
-    color: #666; /* Cor do texto */
+    color: #000000; /* Cor do texto */
     line-height: 1.5; /* Espaçamento entre linhas */
     text-align: justify; /* Justificar texto */
     margin-bottom: 20px; /* Espaçamento inferior */
@@ -636,15 +637,15 @@ background-color: #000000;
 justify-content: space-around;
 background-image: url('Fondo negro y gris con superposición de cuadrados geométricos y estilo de papel de sombra _ Vector Premium.jpeg');
 margin: 0px 0;
- height:570px; /* Altura do section */
+ height: 900px !important; /* Altura do section */
 align-items: center; /* Alinha os itens verticalmente ao centro */
 }
 
 .retangulo {
     position: relative;
-    top: 0x; 
-    height: 35%; /* Aumenta a altura para dispositivos móveis */
-    width: 80%; /* Ajusta a largura para dispositivos móveis */
+    top: 0x;
+    height: 700px; /* Aumenta a altura para dispositivos móveis */
+    width: 40%; /* Ajusta a largura para dispositivos móveis */
 }
 
 }
@@ -715,23 +716,34 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
         text-decoration: none; /* Remove sublinhado dos links */
     }
 
-    .retangulo {
-        position: relative;
-        top: -50x; 
-        height: 97%; /* Aumenta a altura para dispositivos móveis */
-        width: 37%; /* Ajusta a largura para dispositivos móveis */
-    }
-}
+
 
 
 #historia-visao {
     display: flex;
     background-color: #000000;
-    justify-content: space-around;
+    justify-content: space-between; /* ou space-evenly */
     background-image: url('Fondo negro y gris con superposición de cuadrados geométricos y estilo de papel de sombra _ Vector Premium.jpeg');
     margin: 0px 0;
-     height: 1500px; /* Altura do section */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
+    height: 1500px;
+    align-items: center;
+}
+
+.retangulo {
+    position: relative;
+    top: -50x;
+    height: 97%; /* Aumenta a altura para dispositivos móveis */
+    width: 40%; /* Ajusta a largura para dispositivos móveis */
+}
+
+
+.retangulo p {
+    font-size: 1.2em;
+    color: #000000; /* Cor do texto */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    text-align: justify; /* Justificar texto */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    
 }
 
 
@@ -748,3 +760,4 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
     .menu-toggle.active .bar:nth-child(3) {
         transform: rotate(45deg) translate(-5px, -6px);
     }
+}
