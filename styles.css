@@ -17,6 +17,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin: 0; /* Remove a margem do cabeçalho */
+    position: relative; /* Necessário para o menu de hambúrguer */
 }
 
 .logo img {
@@ -24,23 +25,40 @@ header {
     margin-left: 40px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin-right: 0px;
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
 
+.menu-icon {
+    display: block;
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 5px 0;
+}
+
+/* Menu */
 nav {
     padding-left: 20px; /* Adiciona padding à esquerda do menu */
 }
 
 nav ul {
-    margin: 0; /* Remove margem */
-    padding-left: 20px; /* Ajusta o padding para mover o menu */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -51,19 +69,41 @@ nav ul li a {
     font-size: 25px;
 }
 
+/* Menu de hambúrguer */
+nav.nav-menu {
+    display: flex;
+}
+
+nav.nav-menu ul {
+    display: flex;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Estilo para dispositivos móveis */
 @media (max-width: 600px) {
     nav ul {
+        display: none;
+        flex-direction: column;
         text-align: center;
         padding: 0;
+        width: 100%;
+        background-color: #000000;
+    }
+
+    nav ul.active {
+        display: flex;
     }
 
     nav ul li {
         display: block;
         margin: 10px 0;
     }
-    
-    .container {
-        width: 95%;
+
+    .menu-toggle {
+        display: block;
     }
 }
 
@@ -78,7 +118,6 @@ nav ul li a {
         width: 90%;
     }
 }
-
 
 main {
     padding: 0; /* Remove o padding do main para eliminar espaços extras */
@@ -176,10 +215,6 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-
 #historia-visao {
     display: flex;
     background-color: #000000;
@@ -264,250 +299,4 @@ main {
         transform: translateY(0) scale(1);
         opacity: 1;
     }
-}
-
-.retangulo:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-}
-
-.retangulo h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    color: #333; /* Cor do título */
-    font-family: 'Arial', sans-serif; /* Fonte personalizada */
-    text-transform: uppercase; /* Letras maiúsculas */
-    letter-spacing: 1px; /* Espaçamento entre letras */
-    text-align: center; /* Centralizar o título */
-    border-bottom: 2px solid #000000; /* Linha inferior */
-    padding-bottom: 10px; /* Espaçamento inferior */
-}
-
-.retangulo p {
-    font-size: 1.1em;
-    line-height: 1.8;
-    color: #000000; /* Cor do texto */
-    font-family: 'Georgia', serif; /* Fonte serifada para o parágrafo */
-    text-align: justify; /* Justificar o texto */
-    padding: 10px; /* Adiciona espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas para o texto */
-}
-
-#three-images-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay preto com 50% de transparência */
-    z-index: -9; /* Garante que o overlay fique atrás do conteúdo */
-}
-
-.respaldo-title {
-    display: inline-block; /* Permite definir largura e altura do retângulo */
-    padding: 90px 100px; /* Espaçamento interno dentro do retângulo */
-    background-color: #20a855; /* Cor de fundo verde do retângulo */
-    color: white; /* Cor do texto dentro do retângulo */
-    border-radius: 90px; /* Cantos arredondados do retângulo */
-    font-weight: bold; /* Texto em negrito */
-    font-size: 24px; /* Tamanho da fonte */
-    margin-bottom: 20px; /* Espaço abaixo do título */
-}
-
-#three-images-section h2 {
-    font-size: 50px;
-    margin-top: 1px;
-    margin-bottom: 50px;
-    color: #000000; /* Cor do texto do título */
-}
-
-/* Estilo para o contêiner das imagens */
-.image-container {
-    display: flex;          /* Usa Flexbox para layout */
-    justify-content: center; /* Centraliza as imagens horizontalmente */
-    flex-wrap: wrap;        /* Permite que as imagens quebrem para a linha seguinte */
-    align-items: center;   /* Alinha as imagens verticalmente no centro, se necessário */
-    gap: 40px;             /* Adiciona espaço entre as imagens */
-    padding: 20px 0;       /* Espaçamento acima e abaixo do contêiner de imagens */
-}
-
-/* Estilo para as imagens soltas */
-.image-container img {
-    width: 320px; /* Largura fixa para as imagens */
-    height: auto; /* Altura fixa para as imagens */
-    object-fit: cover; /* Faz com que a imagem preencha o contêiner sem distorção */
-    border-radius: 0; /* Remove bordas arredondadas */
-    box-shadow: none; /* Remove a sombra da imagem */
-    transition: transform 0.3s; /* Transição suave para o efeito de hover */
-}
-
-.break {
-    flex-basis: 100%; /* Faz com que o elemento ocupe toda a largura */
-    height: 0; /* Altura zero para não afetar o layout */
-}
-
-/* Efeito hover para a imagem */
-.image-container img:hover {
-    transform: scale(1.05); /* Aumenta levemente o tamanho ao passar o mouse */
-}
-
-#insurance-form {
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 50%;
-    max-width: 500px;
-    margin: 20px auto;
-    text-align: left;
-}
-
-#insurance-form .form-group {
-    margin-bottom: 20px;
-}
-
-#insurance-form label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-#insurance-form input[type="text"],
-#insurance-form input[type="tel"],
-#insurance-form input[type="email"],
-#insurance-form input[type="date"],
-#insurance-form input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-#insurance-form button.submit {
-    display: block; /* Faz o botão se comportar como um bloco para centralização */
-    width: auto; /* Ajusta a largura do botão para o tamanho do conteúdo */
-    max-width: 200px; /* Define uma largura máxima para o botão */
-    margin: 20px auto; /* Centraliza o botão horizontalmente */
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #2a9d8f; /* Cor de fundo do botão */
-    color: white; /* Cor do texto */
-    font-size: 18px; /* Tamanho da fonte */
-    font-weight: bold; /* Texto em negrito */
-    cursor: pointer; /* Cursor de indicação de clique */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave para hover */
-    text-align: center; /* Centraliza o texto dentro do botão */
-}
-
-#insurance-form select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #fff; /* Fundo branco */
-    appearance: none; /* Remove a seta padrão do select */
-    -webkit-appearance: none; /* Para navegadores WebKit */
-    -moz-appearance: none; /* Para navegadores Mozilla */
-    text-align: center; /* Centraliza o texto */
-}
-
-.form-group {
-    text-align: center; /* Centraliza todo o grupo de formulário */
-}
-
-#tipo-documento {
-    margin: 0 auto; /* Centraliza o elemento de seleção */
-}
-
-
-
-/* Efeito de hover para o botão de envio */
-.submit:hover {
-    background: linear-gradient(135deg, #1d7a63, #2a9d8f); /* Gradiente invertido ao passar o mouse */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada */
-    transform: translateY(-3px); /* Levanta o botão ao passar o mouse */
-}
-
-/* Efeito de foco no botão para acessibilidade */
-.submit:focus {
-    outline: 3px solid #1d7a63; /* Contorno ao focar no botão */
-    outline-offset: 2px; /* Espaçamento do contorno */
-}
-
-
-.thank-you-section {
-    text-align: center;
-    margin: 0;
-    padding: 100px 20px 20px; /* Aumenta o padding-top para mover o conteúdo para baixo */
-    width: auto;
-    height: 600px; /* Ajuste de altura, se necessário */
-    background-color: #20a855;
-    background-image: url('Fondo degradado en tonos verdes _ Vector Gratis.jpeg');
-    background-size: cover; /* Faz a imagem cobrir toda a área */
-    background-repeat: no-repeat; /* Impede a repetição da imagem */
-    background-position: center; /* Centraliza a imagem */
-    border-radius: 0;
-    box-shadow: none;
-}
-
-.thank-you-section h2 {
-    font-size: 10em;
-    color: #ffffff; /* Cor do texto branco */
-    margin-bottom: 10px; /* Margem inferior */
-}
-
-.thank-you-section h1 {
-    font-size: 4em;
-    color: #ffffff; /* Cor do texto branco */
-    margin-bottom: 10px; /* Margem inferior */
-}
-
-.thank-you-section p {
-    font-size: 1.2em;
-    color: #ffffff; /* Cor do texto branco */
-    line-height: 1.3; /* Espaçamento entre linhas */
-}
-
-.footer {
-    background-color: #282828; /* Cor de fundo do footer */
-    color: #ffffff; /* Cor do texto */
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer h3 {
-    margin-bottom: 10px;
-    font-size: 24px;
-}
-
-.footer p {
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-.social-icons {
-    margin: 20px 0;
-}
-
-.social-icons a {
-    color: #ffffff;
-    margin: 0 10px;
-    font-size: 20px;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #1da1f2; /* Cor quando passa o mouse, pode ajustar conforme desejado */
-}
-
-.copyright {
-    font-size: 12px;
-    color: #cccccc;
 }
