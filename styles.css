@@ -1,0 +1,435 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(''); /* Fundo geral */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #000000; /* Cor do cabeçalho */
+    color: white;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0; /* Remove a margem do cabeçalho */
+}
+
+.logo img {
+    height: 130px; 
+    margin-left: 40px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-right: 0px;
+}
+
+nav {
+    padding-left: 20px; /* Adiciona padding à esquerda do menu */
+}
+
+nav ul {
+    margin: 0; /* Remove margem */
+    padding-left: 20px; /* Ajusta o padding para mover o menu */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+main {
+    padding: 0; /* Remove o padding do main para eliminar espaços extras */
+    text-align: center;
+}
+
+/* Estilo dos botões */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Fundo específico para a seção dos botões */
+#formulario {
+    background-color: #ffffff; /* Cor de fundo para a seção de botões */
+    background-image: url('Fondo\ degradado\ en\ tonos\ verdes\ _\ Vector\ Gratis.jpeg'); /* Imagem de fundo específica para a seção */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 180px 0; /* Espaçamento interno da seção */
+    margin: 0; /* Remove margens extras da seção */
+}
+
+/* Remove qualquer margem ou padding externo indesejado */
+#formulario * {
+    margin: 0;
+    padding: 0;
+}
+
+#formulario h2 {
+    font-size: 36px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    color: #000000; /* Cor do texto */
+    margin: 0; /* Remove a margem padrão */
+    margin-top: -50px; /* Reduzido para mover o título mais para cima */
+    padding-bottom: 30px; /* Espaço abaixo do título */
+    line-height: 1.0; /* Altura da linha para espaçamento vertical do texto */
+}
+
+.insurance-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* Garante que os elementos internos estejam centralizados verticalmente */
+    text-decoration: none;
+    color: black;
+    border: 2px solid #2a9d8f;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px; /* Ajuste para acomodar o botão interno */
+    padding: 30px;
+    background-color: transparent; /* Deixa o fundo do botão transparente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.insurance-button img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 50px; /* Ajuste o valor para o espaço desejado entre a imagem e o texto */
+}
+
+.insurance-button span {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 30px; /* Espaço entre a imagem e o texto, ajustado para aumentar o espaçamento */
+    margin-bottom: 30px;
+}
+
+/* Estilo para o botão de oferta */
+.offer-button {
+    background-color: #2a9d8f; /* Cor de fundo do botão interno */
+    color: white;              /* Cor do texto */
+    padding: 15px 30px;        /* Ajuste de padding para o botão */
+    border-radius: 10px;        /* Cantos arredondados */
+    margin-top: auto;          /* Espaço entre o texto principal e o botão interno */
+    cursor: pointer;           /* Cursor de indicação de clique */
+    font-size: 18px;           /* Tamanho da fonte do botão interno */
+    font-weight: bold;         /* Negrito para o texto */
+    transition: background-color 0.3s;
+    text-align: center;        /* Centraliza o texto dentro do botão */
+    min-width: 120px;          /* Define uma largura mínima para consistência */
+}
+
+.offer-button:hover {
+    background-color: #20a855; /* Cor de fundo ao passar o mouse */
+}
+
+.insurance-button:hover {
+    background-color: rgba(32, 168, 85, 0.2); /* Fundo translúcido ao passar o mouse */
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+#historia-visao {
+    display: flex;
+    background-color: #000000;
+    justify-content: space-around;
+    background-image: url('Fondo\ negro\ y\ gris\ con\ superposición\ de\ cuadrados\ geométricos\ y\ estilo\ de\ papel\ de\ sombra\ _\ Vector\ Premium.jpeg');
+    margin: 0px 0;
+    height: 800px; /* Altura do section */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.retangulo {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
+     border: 1px solid rgba(221, 221, 221, 0.5); /* Borda translúcida */
+    background-image: url('Fondo\ degradado\ en\ tonos\ verdes\ _\ Vector\ Gratis.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 90px; /* Bordas arredondadas */
+    padding: 20px;
+    height: 500px;
+    width: 35%; /* Largura dos retângulos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para um efeito de profundidade */
+    transition: transform 0.3s; /* Animação de transformação */
+}
+
+.retangulo:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.retangulo h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333; /* Cor do título */
+    font-family: 'Arial', sans-serif; /* Fonte personalizada */
+    text-transform: uppercase; /* Letras maiúsculas */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    text-align: center; /* Centralizar o título */
+    border-bottom: 2px solid #000000; /* Linha inferior */
+    padding-bottom: 10px; /* Espaçamento inferior */
+}
+
+.retangulo p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #000000; /* Cor do texto */
+    font-family: 'Georgia', serif; /* Fonte serifada para o parágrafo */
+    text-align: justify; /* Justificar o texto */
+    padding: 10px; /* Adiciona espaçamento interno */
+    
+    border-radius: 5px; /* Bordas arredondadas para o texto */
+}
+
+
+#three-images-section {
+    position: relative; /* Para que o pseudo-elemento seja posicionado em relação ao elemento pai */
+    background-color: #ffffff; /* Cor de fundo para a seção de imagens */
+    /*background-image: url('Fondo\ degradado\ en\ tonos\ verdes\ _\ Vector\ Gratis.jpeg'); /* Imagem de fundo específica para a seção */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0; /* Espaçamento interno da seção */
+    z-index: 1; /* Garante que o conteúdo da seção fique acima do overlay */
+}
+
+#three-images-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay preto com 50% de transparência */
+    z-index: -9; /* Garante que o overlay fique atrás do conteúdo */
+}
+
+.respaldo-title {
+    display: inline-block; /* Permite definir largura e altura do retângulo */
+    padding: 90px 100px; /* Espaçamento interno dentro do retângulo */
+    background-color: #20a855; /* Cor de fundo verde do retângulo */
+    color: white; /* Cor do texto dentro do retângulo */
+    border-radius: 90px; /* Cantos arredondados do retângulo */
+    font-weight: bold; /* Texto em negrito */
+    font-size: 24px; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+#three-images-section h2 {
+    font-size: 50px;
+    margin-top: 1px;
+    margin-bottom: 50px;
+    color: #000000; /* Cor do texto do título */
+}
+
+/* Estilo para o contêiner das imagens */
+.image-container {
+    display: flex;          /* Usa Flexbox para layout */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    flex-wrap: wrap;        /* Permite que as imagens quebrem para a linha seguinte */
+    align-items: center;   /* Alinha as imagens verticalmente no centro, se necessário */
+    gap: 40px;             /* Adiciona espaço entre as imagens */
+    padding: 20px 0;       /* Espaçamento acima e abaixo do contêiner de imagens */
+}
+
+/* Estilo para as imagens soltas */
+.image-container img {
+    width: 320px; /* Largura fixa para as imagens */
+    height: auto; /* Altura fixa para as imagens */
+    object-fit: cover; /* Faz com que a imagem preencha o contêiner sem distorção */
+    border-radius: 0; /* Remove bordas arredondadas */
+    box-shadow: none; /* Remove a sombra da imagem */
+    transition: transform 0.3s; /* Transição suave para o efeito de hover */
+}
+
+.break {
+    flex-basis: 100%; /* Faz com que o elemento ocupe toda a largura */
+    height: 0; /* Altura zero para não afetar o layout */
+}
+
+/* Efeito hover para a imagem */
+.image-container img:hover {
+    transform: scale(1.05); /* Aumenta levemente o tamanho ao passar o mouse */
+}
+
+#insurance-form {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+#insurance-form .form-group {
+    margin-bottom: 20px;
+}
+
+#insurance-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#insurance-form input[type="text"],
+#insurance-form input[type="tel"],
+#insurance-form input[type="email"],
+#insurance-form input[type="date"],
+#insurance-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#insurance-form button.submit {
+    display: block; /* Faz o botão se comportar como um bloco para centralização */
+    width: auto; /* Ajusta a largura do botão para o tamanho do conteúdo */
+    max-width: 200px; /* Define uma largura máxima para o botão */
+    margin: 20px auto; /* Centraliza o botão horizontalmente */
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2a9d8f; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Cursor de indicação de clique */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave para hover */
+    text-align: center; /* Centraliza o texto dentro do botão */
+}
+
+#insurance-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff; /* Fundo branco */
+    appearance: none; /* Remove a seta padrão do select */
+    -webkit-appearance: none; /* Para navegadores WebKit */
+    -moz-appearance: none; /* Para navegadores Mozilla */
+    text-align: center; /* Centraliza o texto */
+}
+
+.form-group {
+    text-align: center; /* Centraliza todo o grupo de formulário */
+}
+
+#tipo-documento {
+    margin: 0 auto; /* Centraliza o elemento de seleção */
+}
+
+
+
+/* Efeito de hover para o botão de envio */
+.submit:hover {
+    background: linear-gradient(135deg, #1d7a63, #2a9d8f); /* Gradiente invertido ao passar o mouse */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada */
+    transform: translateY(-3px); /* Levanta o botão ao passar o mouse */
+}
+
+/* Efeito de foco no botão para acessibilidade */
+.submit:focus {
+    outline: 3px solid #1d7a63; /* Contorno ao focar no botão */
+    outline-offset: 2px; /* Espaçamento do contorno */
+}
+
+
+.thank-you-section {
+    text-align: center;
+    margin: 0;
+    padding: 100px 20px 20px; /* Aumenta o padding-top para mover o conteúdo para baixo */
+    width: auto;
+    height: 600px; /* Ajuste de altura, se necessário */
+    background-color: #20a855;
+    background-image: url('Fondo degradado en tonos verdes _ Vector Gratis.jpeg');
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    background-position: center; /* Centraliza a imagem */
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.thank-you-section h2 {
+    font-size: 10em;
+    color: #ffffff; /* Cor do texto branco */
+    margin-bottom: 10px; /* Margem inferior */
+}
+
+.thank-you-section h1 {
+    font-size: 4em;
+    color: #ffffff; /* Cor do texto branco */
+    margin-bottom: 10px; /* Margem inferior */
+}
+
+.thank-you-section p {
+    font-size: 1.2em;
+    color: #ffffff; /* Cor do texto branco */
+    line-height: 1.3; /* Espaçamento entre linhas */
+}
+
+.footer {
+    background-color: #282828; /* Cor de fundo do footer */
+    color: #ffffff; /* Cor do texto */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.footer p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #1da1f2; /* Cor quando passa o mouse, pode ajustar conforme desejado */
+}
+
+.copyright {
+    font-size: 12px;
+    color: #cccccc;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gil Seguros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="Inicial.html"><img src="WhatsApp Image 2024-08-30 at 18.png" alt="Logotipo Gil Seguros"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#carro">Quem Somos</a></li>
+                <li><a href="#vida">Seguros</a></li>
+                <li><a href="#outros">Contato</a></li>
+                <li><a href="#formulario">Formulário</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="formulario-seguro">
+            <h2>Formulário de Seguro de tu moto</h2>
+            <form action="#" method="post" id="insurance-form">
+                <div class="form-group">
+                    <label for="nome">Nombre Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Escribe tu nombre completo" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="docuemnto">Documento:</label>
+                    <input type="text" id="documento" name="documento" placeholder="123456789-0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo-documento">Tipo de Documento:</label>
+                    <select id="tipo-documento" name="tipo-documento" required>
+                        <option value="" disabled selected>Elije el documento</option>
+                        <option value="estranjero">Documento Estranjero</option>
+                        <option value="dni">DNI</option>
+                        <option value="ci">C.I</option>
+                        S
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Telefono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="(XX) XXXXX-XXXX" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha-nascimento">Fecha de nacimiento:</label>
+                    <input type="date" id="fecha-nascimento" name="fecha-nacimiento" required>
+                </div>
+                <div class="form-group">
+                    <label for="marca">Marca de la moto:</label>
+                    <input type="text" id="marca" name="marca" placeholder="Escribe la marca de tu moto" required>
+                </div>
+                <div class="form-group">
+                    <label for="modelo">Modelo de la moto:</label>
+                    <input type="text" id="modelo" name="modelo" placeholder="Escribe el modelo de tu moto" required>
+                </div>
+    
+                <div class="form-group">
+
+                    <label for="ano">Año del vehículo:</label>
+                    <input type="number" id="ano" name="ano" min="1900" max="2025" placeholder="Ex: 2021" required>
+                </div>
+                <button type="submit" class="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+   
+    <footer>
+        <p>&copy; 2024 Gil Seguros. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function redirectToThankYouPage() {
+            // Redireciona para a página de agradecimento
+            window.location.href = "agradecimento.html";
+            // Retorna false para evitar o envio padrão do formulário
+            return false;
+        }
+    </script>
+</body>
+</html>
