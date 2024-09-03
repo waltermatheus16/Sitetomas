@@ -718,7 +718,7 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
     .retangulo {
         position: relative;
         top: -50x; 
-        height: 95%; /* Aumenta a altura para dispositivos móveis */
+        height: 97%; /* Aumenta a altura para dispositivos móveis */
         width: 37%; /* Ajusta a largura para dispositivos móveis */
     }
 }
