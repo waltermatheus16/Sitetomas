@@ -203,6 +203,7 @@ main {
     align-items: center; /* Alinha os itens verticalmente ao centro */
 }
 
+/* Estilo base para os retângulos */
 .retangulo {
     background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
     border: 1px solid rgba(221, 221, 221, 0.5); /* Borda translúcida */
@@ -214,45 +215,50 @@ main {
     height: 500px;
     width: 35%; /* Largura dos retângulos */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para um efeito de profundidade */
-    animation: moveIn 1s ease-out forwards; /* Animação de entrada com 'forwards' para manter o estado final */
-    opacity: 1; /* Garante que eles permaneçam visíveis */
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 1s ease, transform 1s ease; /* Transições suaves */
 }
 
-.retangulo:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.retangulo:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.retangulo:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-.retangulo:nth-child(4) {
-    animation-delay: 0.6s;
-}
-
-@keyframes moveIn {
+/* Animações de entrada */
+@keyframes moveInLeft {
     from {
-        transform: translateX(-100%) scale(0.8);
+        transform: translateX(-100%); /* Começa fora da tela à esquerda */
         opacity: 0;
     }
     to {
-        transform: translateX(0) scale(1);
+        transform: translateX(0); /* Move para a posição original */
         opacity: 1;
     }
 }
 
-.retangulo:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+@keyframes moveInRight {
+    from {
+        transform: translateX(100%); /* Começa fora da tela à direita */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0); /* Move para a posição original */
+        opacity: 1;
+    }
 }
+
+/* Adiciona a animação de entrada quando a classe 'visible' é aplicada */
+.retangulo:nth-of-type(1).visible {
+    animation: moveInLeft 1s ease-out forwards; /* Animação vindo da esquerda */
+}
+
+.retangulo:nth-of-type(2).visible {
+    animation: moveInRight 1s ease-out forwards; /* Animação vindo da direita */
+}
+
+
+
+
 
 .retangulo h3 {
     font-size: 1.8em;
     margin-bottom: 15px;
-    color: #333; /* Cor do título */
+    color: #000000; /* Cor do título */
     font-family: 'Arial', sans-serif; /* Fonte personalizada */
     text-transform: uppercase; /* Letras maiúsculas */
     letter-spacing: 1px; /* Espaçamento entre letras */
@@ -263,7 +269,7 @@ main {
 
 .retangulo p {
     font-size: 1.2em;
-    color: #666; /* Cor do texto */
+    color: #000000; /* Cor do texto */
     line-height: 1.5; /* Espaçamento entre linhas */
     text-align: justify; /* Justificar texto */
     margin-bottom: 20px; /* Espaçamento inferior */
@@ -312,7 +318,7 @@ main {
 
 .retangulo p {
     font-size: 1.2em;
-    color: #666; /* Cor do texto */
+    color: #000000; /* Cor do texto */
     line-height: 1.5; /* Espaçamento entre linhas */
     text-align: justify; /* Justificar texto */
     margin-bottom: 20px; /* Espaçamento inferior */
@@ -581,7 +587,7 @@ main {
 
 /* Estilo para o menu Tablet */
 
-@media (max-width: 1280px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 .menu-container {
     display: flex;
     justify-content: flex-end; /* Alinha o conteúdo à direita */
@@ -622,8 +628,26 @@ main {
     font-size: 18px;
 }
 
+
+
+#historia-visao {
+    display: flex;
+    background-color: #000000;
+    justify-content: space-around;
+    background-image: url('Fondo negro y gris con superposición de cuadrados geométricos y estilo de papel de sombra _ Vector Premium.jpeg');
+    margin: 0;
+    height: 1100px !important; /* Força a altura desejada da seção */
+    align-items: center;
 }
 
+.retangulo {
+    position: relative;
+    top: 0x; 
+    height: 70%; /* Aumenta a altura para dispositivos móveis */
+    width: 40%; /* Ajusta a largura para dispositivos móveis */
+}
+
+}
 
 
 
@@ -643,7 +667,7 @@ main {
         display: flex;
         flex-direction: column;
         cursor: pointer;
-       
+
     }
 
     .menu-toggle .bar {
@@ -690,6 +714,29 @@ main {
         text-decoration: none; /* Remove sublinhado dos links */
     }
 
+
+
+
+#historia-visao {
+    display: flex;
+    background-color: #000000;
+    justify-content: space-around;
+    background-image: url('Fondo negro y gris con superposición de cuadrados geométricos y estilo de papel de sombra _ Vector Premium.jpeg');
+    margin: 0px 0;
+     height: 1550px; /* Altura do section */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+.retangulo {
+    position: relative;
+    top: -50x; 
+    height: 95%; /* Aumenta a altura para dispositivos móveis */
+    width: 36%; /* Ajusta a largura para dispositivos móveis */
+}
+
+
+
+
+
     /* Efeito ao clicar no botão de menu hambúrguer */
     .menu-toggle.active .bar:nth-child(1) {
         transform: rotate(-45deg) translate(-5px, 6px);
@@ -702,4 +749,5 @@ main {
     .menu-toggle.active .bar:nth-child(3) {
         transform: rotate(45deg) translate(-5px, -6px);
     }
+
 }
