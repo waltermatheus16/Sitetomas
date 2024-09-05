@@ -864,7 +864,7 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
         width: 30px;
         height: 3px;
         background-color: white;
-        margin: 5px -20px !important; /* Ajuste a margem conforme necessário */
+        margin: 5px -60px; /* Ajuste a margem conforme necessário */
         transition: 0.3s;
     }
 
@@ -878,19 +878,6 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
         background-color: #000000; /* Fundo escuro para o menu */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para maior destaque */
         z-index: 1000; /* Garante que o menu apareça sobre outros elementos */
-    }
-
-      /* Efeito ao clicar no botão de menu hambúrguer */
-      .menu-toggle.active .bar:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .menu-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active .bar:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
     }
 
     .nav-menu.active {
@@ -932,8 +919,6 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
     font-size: 36px; /* Reduz o tamanho da fonte para dispositivos móveis */
     margin-bottom: 10px;
 }
-
-
 
 .seguro-item {
     width: 100%; /* Ajusta a largura para 100% do contêiner pai em dispositivos móveis */
@@ -1108,7 +1093,7 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
         width: 25px;
         height: 2px;
         background-color: white;
-        margin: 5px -120px; /* Ajuste a margem conforme necessário */
+        margin: 5px -70px; /* Ajuste a margem conforme necessário */
         transition: 0.3s;
     }
 
@@ -1120,15 +1105,6 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
         font-size: 18px;
         padding: 8px 16px;
     }
-
-    #seguros {
-        padding: 20px;
-        background-color: #f5f5f5; /* Cor de fundo opcional */
-        background-image: url('Fondo negro y gris con superposición de cuadrados geométricos y estilo de papel de sombra _ Vector Premium.jpeg');
-        height: 2600px; /* Ajuste a altura conforme necessário */
-     }
-
-
 
     #seguros h1 {
         font-size: 28px;
