@@ -1127,4 +1127,22 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
     #seguros .seguro-item img {
         max-height: 120px;
     }
+
+    #historia-visao {
+        display: flex;
+        background-color: #000000;
+        justify-content: space-between; /* ou space-evenly */
+        background-image: url('Fondo negro y gris con superposición de cuadrados geométricos y estilo de papel de sombra _ Vector Premium.jpeg');
+        margin: 0px 0;
+        height: 1900px;
+        align-items: center;
+    }
+
+    .retangulo {
+        position: relative;
+        top: -50x;
+        height: 1750px; /* Aumenta a altura para dispositivos móveis */
+        width: 37%; /* Ajusta a largura para dispositivos móveis */
+    }
+
 }
