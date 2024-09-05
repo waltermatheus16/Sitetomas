@@ -925,7 +925,7 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
                 display: block; /* Exibido apenas em dispositivos móveis */
                 position: fixed;
                 bottom: 40px; /* Distância do fundo da tela */
-                left: 80%; /* Distância da borda esquerda da tela (ajuste para mover o ícone mais para a esquerda) */
+                left: 70%; /* Distância da borda esquerda da tela (ajuste para mover o ícone mais para a esquerda) */
                 background-color: #25D366; /* Cor do fundo do ícone */
                 border-radius: 50%; /* Torna o ícone redondo */
                 padding: 15px; /* Espaçamento interno */
