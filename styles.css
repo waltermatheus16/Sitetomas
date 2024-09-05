@@ -1104,33 +1104,88 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
 @media (max-width: 468px) {
     .menu-container {
         margin-right: 20px;
+        position: relative; /* Garante que o contêiner do menu esteja corretamente posicionado */
     }
 
-        .menu-toggle .bar {
+    /* Estilo do botão do menu hambúrguer */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        margin: 0;
+        position: relative; /* Garante que o botão do menu esteja corretamente posicionado */
+        z-index: 10000; /* Garante que o botão esteja acima do menu */
+        transition: transform 0.3s ease; /* Transição suave para a rotação do botão */
+    }
+
+    .menu-toggle .bar {
         width: 25px;
         height: 2px;
         background-color: white;
-        margin: 5px -70px; /* Ajuste a margem conforme necessário */
-        transition: 0.3s;
+        margin: 5px 0; /* Corrige a margem para espaçamento vertical */
+        transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave para transformação e opacidade */
     }
 
+    /* Novo efeito das barras quando o menu está aberto */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(45deg) translateY(6px); /* Rotaciona e move a primeira barra */
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0; /* Torna a segunda barra invisível */
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translateY(-6px); /* Rotaciona e move a terceira barra */
+    }
+
+    /* Estilo do menu de navegação */
     .nav-menu {
-        top: 160px; /* Ajustado para a altura do cabeçalho em dispositivos menores */
+        position: fixed; /* Mantém o menu fixo na tela */
+        top: 60px; /* Ajustado para a altura do cabeçalho em dispositivos menores */
+        right: 0;
+        width: 100%;
+        background-color: #333;
+        display: none; /* Oculta o menu por padrão */
+        flex-direction: column;
+        align-items: center;
+        z-index: 9999; /* Garante que o menu fique acima de outros elementos */
+        opacity: 0; /* Inicialmente invisível */
+        transform: translateX(100%); /* Inicialmente deslocado para fora da tela */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave para opacidade e transformação */
+    }
+
+    /* Exibe o menu quando o botão é clicado */
+    .menu-toggle.active + .nav-menu {
+        display: flex;
+        opacity: 1; /* Torna o menu visível */
+        transform: translateX(0); /* Move o menu para a posição original */
+    }
+
+    .nav-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-menu ul li {
+        width: 100%;
     }
 
     .nav-menu ul li a {
+        display: block;
         font-size: 18px;
-        padding: 8px 16px;
+        padding: 15px;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-bottom: 1px solid #444;
+        transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
     }
 
-    #seguros h1 {
-        font-size: 28px;
-        margin-bottom: 8px;
-    }
-
-    .seguro-item {
-        max-width: 95%;
-        padding: 8px;
+    .nav-menu ul li a:hover {
+        background-color: #555; /* Cor de fundo ao passar o mouse */
     }
 
 
