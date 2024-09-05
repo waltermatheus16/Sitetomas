@@ -849,9 +849,10 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
 @media (max-width: 768px) {
     .menu-container {
         display: flex;
-        margin-right: 40px;
+        justify-content: space-between; /* Garantir que o logo e o menu estejam alinhados */
         align-items: center;
-        position: relative; /* Permite posicionamento absoluto do menu */
+        padding: 10px; /* Ajuste o padding se necessário */
+        position: relative;
     }
 
     .menu-toggle {
@@ -864,20 +865,32 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
         width: 30px;
         height: 3px;
         background-color: white;
-        margin: 5px -60px; /* Ajuste a margem conforme necessário */
+        margin: 5px 0; /* Ajuste a margem verticalmente se necessário */
         transition: 0.3s;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 
     .nav-menu {
         display: none;
-        flex-direction: column; /* Garante que os itens sejam empilhados verticalmente */
-        width: 100%; /* Ajuste conforme necessário para ocupar a largura total do dispositivo */
+        flex-direction: column;
+        width: 100%;
         position: absolute;
-        top: 162px; /* Ajuste conforme a altura do cabeçalho e do hambúrguer */
+        top: 60px; /* Ajuste conforme a altura do cabeçalho e do hambúrguer */
         right: 0; /* Alinha o menu com o botão hambúrguer */
-        background-color: #000000; /* Fundo escuro para o menu */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para maior destaque */
-        z-index: 1000; /* Garante que o menu apareça sobre outros elementos */
+        background-color: #000000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
     }
 
     .nav-menu.active {
@@ -886,23 +899,23 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
 
     .nav-menu ul {
         display: flex;
-        flex-direction: column; /* Garante que os itens da lista sejam exibidos em coluna */
-        width: 100%;
-        padding: 0; /* Remove o padding se houver */
-        margin: 0; /* Remove a margem se houver */
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
     }
 
     .nav-menu ul li {
-        margin: 10px 0; /* Espaçamento vertical entre os itens */
+        margin: 10px 0;
     }
 
     .nav-menu ul li a {
         display: block;
         font-size: 20px;
         padding: 10px 20px;
-        color: white; /* Garante que o texto seja visível em fundo escuro */
-        text-decoration: none; /* Remove sublinhado dos links */
+        color: white;
+        text-decoration: none;
     }
+
 
 
 /* ================================================================= */
@@ -1065,17 +1078,7 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
 
 
     /* Efeito ao clicar no botão de menu hambúrguer */
-    .menu-toggle.active .bar:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .menu-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active .bar:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
+ 
 }
 
 
