@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gil Seguros</title>
+    <title>Gil's Seguros</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="Inicial.html"><img src="WhatsApp Image 2024-08-30 at 18.png" alt="Logotipo Gil Seguros"></a>
+        <div class="menu-container">
+            <div class="logo">
+                <a href="index.html"><img src="WhatsApp Image 2024-08-30 at 18.png" alt="Logotipo Gil Seguros"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <!-- Ícone do menu hambúrguer -->
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-        <nav>
+
+        <!-- Menu de navegação -->
+        <nav class="nav-menu" id="nav-menu">
             <ul>
-                <li><a href="Inicial.html">Volver a Inicio</a></li>
+                <li><a href="#historia-visao">Quien Somos</a></li>
+                <li><a href="#formulario">Seguros</a></li>
+                <li><a href="#footer">Contato</a></li>
+                <li><a href="qualquer">Formulário</a></li>
             </ul>
         </nav>
     </header>
@@ -24,7 +37,7 @@
             <h1>Entraremos en contacto contigo en breve.</h1>
         </section>
     </main>
-    <footer 
+    <footer
     
     id = "footer"
     class="footer">
@@ -33,9 +46,10 @@
         <div class="social-icons">
             <a href="https://www.facebook.com/Gilsegurosuy" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/gilsegurosuy/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.instagram.com/gilsegurosuy/" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="http://wa.me/59895333911" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
         <p class="copyright">&copy; 2024 Gils's Seguros. Todos los derechos reservados para Genius Desing.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
