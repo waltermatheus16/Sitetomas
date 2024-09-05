@@ -1094,8 +1094,9 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
     .menu-toggle .bar {
         width: 25px;
         height: 2px;
-        right: 50px; /* Aumentei o valor para mover o menu para a esquerda */
-        left: 80px;  /* Diminui o valor para mover o menu para a esquerda */
+        background-color: white;
+        margin: 5px -70px; /* Ajuste a margem conforme necessário */
+        transition: 0.3s;
     }
 
     .nav-menu {
