@@ -1136,6 +1136,19 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
         padding: 8px;
     }
 
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
     #seguros .seguro-item img {
         max-height: 120px;
     }
