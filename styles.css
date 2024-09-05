@@ -864,7 +864,7 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
         width: 30px;
         height: 3px;
         background-color: white;
-        margin: 5px -60px; /* Ajuste a margem conforme necessário */
+        margin: 5px -20px !important; /* Ajuste a margem conforme necessário */
         transition: 0.3s;
     }
 
@@ -1093,7 +1093,7 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
         width: 25px;
         height: 2px;
         background-color: white;
-        margin: 5px -70px; /* Ajuste a margem conforme necessário */
+        margin: 5px -120px; /* Ajuste a margem conforme necessário */
         transition: 0.3s;
     }
 
@@ -1105,6 +1105,15 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
         font-size: 18px;
         padding: 8px 16px;
     }
+
+    #seguros {
+        padding: 20px;
+        background-color: #f5f5f5; /* Cor de fundo opcional */
+        background-image: url('Fondo negro y gris con superposición de cuadrados geométricos y estilo de papel de sombra _ Vector Premium.jpeg');
+        height: 2600px; /* Ajuste a altura conforme necessário */
+     }
+
+
 
     #seguros h1 {
         font-size: 28px;
