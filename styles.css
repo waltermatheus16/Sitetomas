@@ -880,6 +880,19 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
         z-index: 1000; /* Garante que o menu apareça sobre outros elementos */
     }
 
+      /* Efeito ao clicar no botão de menu hambúrguer */
+      .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
     .nav-menu.active {
         display: flex;
     }
@@ -919,6 +932,8 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
     font-size: 36px; /* Reduz o tamanho da fonte para dispositivos móveis */
     margin-bottom: 10px;
 }
+
+
 
 .seguro-item {
     width: 100%; /* Ajusta a largura para 100% do contêiner pai em dispositivos móveis */
