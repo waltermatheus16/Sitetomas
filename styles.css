@@ -863,10 +863,8 @@ align-items: center; /* Alinha os itens verticalmente ao centro */
     .menu-toggle .bar {
         width: 30px;
         height: 3px;
-        right: 80px; /* Ajuste o valor conforme necessário */
-        left: 200px; /* Ajuste este valor conforme necessário */
         background-color: white;
-        margin: 5px 40px 5px 0px; /* Margem superior, direita, inferior e esquerda, respectivamente */
+        margin: 5px -60px; /* Ajuste a margem conforme necessário */
         transition: 0.3s;
     }
 
