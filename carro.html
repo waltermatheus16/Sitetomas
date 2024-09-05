@@ -16,7 +16,127 @@
             <div class="menu-toggle" id="menu-toggle">
                 <!-- Ícone do menu hambúrguer -->
                 <span class="bar"></span>
+                <span class="bar"></span><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gil's Seguros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="menu-container">
+            <div class="logo">
+                <a href="index.html"><img src="WhatsApp Image 2024-08-30 at 18.png" alt="Logotipo Gil Seguros"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <!-- Ícone do menu hambúrguer -->
                 <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+
+
+        <nav class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="#historia-visao">Quien Somos</a></li>
+                <li><a href="#formulario">Seguros</a></li>
+                <li><a href="#footer">Contato</a></li>
+                <li><a href="qualquer">Formulário</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="formulario-seguro">
+            <h2>Formulário de Seguro de tu automóvil</h2>
+            <form action="https://formspree.io/f/xwpezljr" method="post" id="insurance-form" onsubmit="return redirectToThankYouPage()">
+                <div class="form-group">
+                    <label for="nome">Nombre Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Escribe tu nombre completo" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="docuemnto">Documento:</label>
+                    <input type="text" id="documento" name="documento" placeholder="123456789-0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo-documento">Tipo de Documento:</label>
+                    <select id="tipo-documento" name="tipo-documento" required>
+                        <option value="" disabled selected>Elije el documento</option>
+                        <option value="estranjero">Documento Estranjero</option>
+                        <option value="dni">DNI</option>
+                        <option value="ci">C.I</option>
+                        S
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Telefono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="(XX) XXXXX-XXXX" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha-nascimento">Fecha de nacimiento:</label>
+                    <input type="date" id="fecha-nascimento" name="fecha-nacimiento" required>
+                </div>
+                <div class="form-group">
+                    <label for="marca">Marca del vehículo:</label>
+                    <input type="text" id="marca" name="marca" placeholder="Escribe la marca de su vehículo" required>
+                </div>
+                <div class="form-group">
+                    <label for="modelo">Modelo del vehículo:</label>
+                    <input type="text" id="modelo" name="modelo" placeholder="Escribe el modelo de su vehículo" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="version">Version:</label></label>
+                    <input type="text" id="version" name="version" placeholder="Escribe la version de tu auto" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="ano">Año del vehículo:</label>
+                    <input type="number" id="ano" name="ano" min="1900" max="2025" placeholder="Ex: 2021" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo-de-seguro">Tipo de seguro:</label>
+                    <select id="tipo-de-seguro" name="tipo-de-seguro" required>
+                        <option value="" disabled selected>Elije el tipo de seguro</option>
+                        <option value="total">Seguro Total</option>
+                        <option value="triple">Seguro Triple (Robo,Incendio y Hurto)</option>
+                        <option value="basico">Seguro Basico (Responsabilidad Civil)</option>
+                        <option value="todos">Quiero el presupuesto de los 3</option>
+                        
+                    </select>
+                </div>
+
+                <button type="submit" class="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer id = "footer" class="footer">
+        <h3>Nuestro contacto</h3>
+        <p>Nuestras rede sociales</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/Gilsegurosuy" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/gilsegurosuy/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/gilsegurosuy/" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p class="copyright">&copy; 2024 Gils's Seguros. Todos los derechos reservados para Genius Desing.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
                 <span class="bar"></span>
             </div>
         </div>
