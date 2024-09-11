@@ -77,7 +77,7 @@ header {
 nav {
     display: flex;
     flex-grow: 1; /* Permite que o nav ocupe o espaço disponível */
-    margin-left: 400px; /* Ajusta a posição do nav para a direita */
+    margin-left: 550px; /* Ajusta a posição do nav para a direita */
 }
 
 
@@ -85,10 +85,11 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0; /* Remove margem */
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
+    
     margin: 0 15px;
     position: relative;
 }
@@ -98,21 +99,88 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     font-size: 25px;
+    display: block;
 }
 
 
-nav ul li:not(:last-child)::after {
+nav > ul > li:not(:last-child)::after {
     content: "";
     position: absolute;
     right: -15px; /* Ajuste a posição da listra */
-    top: -10px;
+    top: -3px;
     height: 30px;
     width: 3px; /* Espessura da listra */
     background-color: rgb(255, 255, 255); /* Cor da listra */
 }
 
+
+
+/* ================================================================= =================================================================*/
+
+
+
+/* Estilos para dropdown menu */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Coloca o submenu logo abaixo do item pai */
+    left: -55px;
+    background-color: #000000;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+    min-width: 180px; /* Largura mínima para o submenu */
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave */
+    opacity: 0;
+    transform: translateY(10px);
+    border-radius: 68px;
+}
+
+/* Exibir submenu ao passar o mouse */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    border-radius: 10px;
+}
+
+/* Estilo dos links dentro do submenu */
+.dropdown-menu li a {
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 68px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cor de fundo ao passar o mouse nos links do submenu */
+.dropdown-menu li a:hover {
+    background-color: #AEE67E; /* Cor de destaque no hover */
+    color: rgb(255, 255, 255); /* Texto branco no hover */
+    border-radius: 68px; /* Bordas arredondadas */
+}
+
+
+
+
+/* =================================================================*/
+
+
+
+
+
+
+
+/* Remover padding do main */
 main {
-    padding: 0; /* Remove o padding do main para eliminar espaços extras */
+    padding: 0;
     text-align: center;
 }
 
@@ -126,8 +194,8 @@ main {
 
 /* Fundo específico para a seção dos botões */
 #formulario {
-    background-color: #ffffff; /* Cor de fundo para a seção de botões */
-    background-image: url('Fondo degradado en tonos verdes _ Vector Gratis.jpeg'); /* Imagem de fundo específica para a seção */
+    background-color: #AEE67E; /* Cor de fundo para a seção de botões */
+   
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -207,6 +275,17 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+
+
+
+
+/* =================================================================*/
+
+
+/* Parte historia e visão*/
+
+
+
 #historia-visao {
     display: flex;
     background-color: #000000;
@@ -219,9 +298,9 @@ main {
 
 /* Estilo base para os retângulos */
 .retangulo {
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
+    background-color: #AEE67E; /* Fundo escuro com transparência */
     border: 1px solid rgba(221, 221, 221, 0.5); /* Borda translúcida */
-    background-image: url('Fondo degradado en tonos verdes _ Vector Gratis.jpeg');
+    
     background-size: cover;
     background-position: center;
     border-radius: 90px; /* Bordas arredondadas */
@@ -264,9 +343,6 @@ main {
 .retangulo:nth-of-type(2).visible {
     animation: moveInRight 1s ease-out forwards; /* Animação vindo da direita */
 }
-
-
-
 
 
 .retangulo h3 {
@@ -353,6 +429,10 @@ main {
     background-color: #333333; /* Cor do botão ao passar o mouse */
 }
 
+
+
+
+
 /* =================================================================*/
 
 
@@ -384,8 +464,8 @@ main {
   }
   
   .seguro-item {
-    background-color: #fff;
-    background-image: url('Fondo\ degradado\ en\ tonos\ verdes\ _\ Vector\ Gratis.jpeg');
+    background-color: #AEE67E;
+    
     background-size: cover;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -482,9 +562,9 @@ main {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-image: url('Fondo\ degradado\ en\ tonos\ verdes\ _\ Vector\ Gratis.jpeg'); /* Certifique-se de adicionar a URL da imagem de fundo, se necessário */
+    
     background-size: cover;
-    background-color: #000000;
+    background-color: #AEE67E;
     align-items: flex-start;
     max-width: 80%;
     margin: 0 auto;
@@ -539,7 +619,10 @@ main {
 
 
 
-/* Parte Seguros y paginas */
+/* =================================================================*/
+
+
+/* Parte Seguros y paginas  */
 
 
 
@@ -641,7 +724,7 @@ main {
 #insurance-form input[type="email"],
 #insurance-form input[type="date"],
 #insurance-form input[type="number"]
- {
+{
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -709,8 +792,8 @@ main {
     padding: 100px 20px 20px; /* Aumenta o padding-top para mover o conteúdo para baixo */
     width: auto;
     height: 600px; /* Ajuste de altura, se necessário */
-    background-color: #20a855;
-    background-image: url('Fondo degradado en tonos verdes _ Vector Gratis.jpeg');
+    background-color: #AEE67E;
+    
     background-size: cover; /* Faz a imagem cobrir toda a área */
     background-repeat: no-repeat; /* Impede a repetição da imagem */
     background-position: center; /* Centraliza a imagem */
@@ -760,7 +843,7 @@ main {
 }
 
 .footer p {
-    font-size: 14px;
+    font-size: 18px;
     margin: 5px 0;
 }
 
@@ -780,10 +863,24 @@ main {
 }
 
 .copyright {
-    font-size: 12px;
+    font-size: 22px;
     color: #cccccc;
 }
 
+
+.copyright a {
+    color: #cccccc; /* Cor normal do link */
+    text-decoration: underline; /* Sempre sublinhado */
+    font-size: 18px; /* Aumenta o tamanho da fonte (ajuste conforme desejado) */
+}
+
+.copyright a:hover {
+    text-decoration: underline; /* Mantém o sublinhado ao passar o mouse */
+}
+
+.copyright a:active {
+    color: #AEE67E; /* Cor quando o link é clicado */
+}
 
 
 
@@ -806,7 +903,7 @@ main {
     flex-direction: column;
     cursor: pointer;
 }
-.nav-menu {
+.nav-menu{
     display: flex;
     flex-direction: column;
     width: 550px; /* Ajuste conforme necessário */
