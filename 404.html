@@ -16,7 +16,7 @@
                 <a href="index.html"><img src="WhatsApp Image 2024-08-30 at 18.png" alt="Logotipo Gil Seguros"></a>
             </div>
             <div class="menu-toggle" id="menu-toggle">
-                <!-- Ícone do menu hambúrguer -->
+                
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -26,11 +26,21 @@
         
         <nav class="nav-menu" id="nav-menu">
             <ul>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="#historia-visao">Nosotros</a></li>
-                <li><a href="#seguros">Seguros</a></li>
+                <li class="dropdown">
+                    <a href="#formulario">Seguros</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="carro.html">Seguro de Auto</a></li>
+                        <li><a href="moto.html">Seguro de Moto</a></li>
+                        <li><a href="casa.html">Seguro de Casa</a></li>
+                        <li><a href="segurovida.html">Seguro de Vida</a></li>
+                        <li><a href="#seguro-bicicleta">Otros Seguros</a></li>
+                    </ul>
+                </li>
                 <li><a href="#footer">Contacto y Redes</a></li>
-                <li><a href="#formulario">Cotizacion de Seguro</a></li>
-                <li><a href="#naviagtion">Nuestro Local</a></li>
+                
+                <li><a href="#navigation">Nuestro Local</a></li> 
             </ul>
         </nav>
     </header>
@@ -115,7 +125,7 @@
                     <span>Quiero un seguro de vida </span>
                     <span class="offer-button">Ver oferta</span>
                 </a>
-                <a href="Otros" class="insurance-button">
+                <a href="variosseguros.html" class="insurance-button">
                     <img src="pngtree-life-insurance-line-icon-png-image_9065266.png" alt="Otros Seguros">
                     <span>Otros seguros</span>
                     <span class="offer-button">Ver oferta</span>
@@ -189,9 +199,11 @@
             <a href="https://www.instagram.com/gilsegurosuy/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="http://wa.me/59895333911" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
-        <p class="copyright">&copy; 2024 Gil's Seguros. Todos os direitos reservados para Genius Desing.</p>
-    </footer>
-
+        <p class="copyright">
+            &copy; 2024 Gil's Seguros. Created By
+            <a href="https://www.instagram.com/geniusstudiowd/" target="_blank">Genius Studio</a>.
+          </p>
+          
     <script src="script.js"></script>
 </body>
 </html>
